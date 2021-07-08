@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <h1>AcerLaptops</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="laptop.png" class="laptop">
+            <div id="circle">
+                <div class="feature one">
+                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                    <div>
+                        <h1>Battery</h1>
+                        <p>8000Mah , 10 Hours of use</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <i class="fa fa-microchip" aria-hidden="true"></i>
+                    <div>
+                        <h1>processor</h1>
+                        <p>ryzen 5</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                    <div>
+                        <h1>storage</h1>
+                        <p>256 Gb of SSD , 1000 Gb of HHD</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <i class="fa fa-tag" aria-hidden="true"></i>
+                    <div>
+                        <h1>price</h1>
+                        <p>50,000 INR , $2000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <i class="fa fa-angle-up" aria-hidden="true" id="upbtn"></i>
+            <h3>Features</h3>
+            <i class="fa fa-angle-down" aria-hidden="true" id="downbtn"></i>
+        </div>
+    </div>
+    
+
+
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downbtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
